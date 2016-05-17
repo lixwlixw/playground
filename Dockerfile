@@ -1,4 +1,5 @@
 FROM index.alauda.cn/asiainfoldp/baseimage-web-nodejs
+RUN apt-get update && apt-get install git -y
 RUN cd /usr/share/nginx/html
 RUN git clone https://github.com/tensorflow/playground.git
 RUN npm install
